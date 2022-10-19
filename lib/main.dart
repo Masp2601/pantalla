@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'mainscreen/main_screen.dart';
+import 'package:pantalla/pages/walk_page.dart';
 
 void main() async {
   runApp(MyApp(
@@ -9,7 +8,7 @@ void main() async {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MainScreen(),
+      home: const WalkPage(),
       debugShowCheckedModeBanner: false,
     ),
   ));

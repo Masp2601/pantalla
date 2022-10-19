@@ -1,5 +1,6 @@
 import 'package:pantalla/tabpages/home_tab.dart';
 import 'package:flutter/material.dart';
+import 'package:pantalla/tabpages/walk_tab.dart';
 import '../tabpages/earning_tab.dart';
 import '../tabpages/profile_tab.dart';
 import '../tabpages/reating_tab.dart';
@@ -25,7 +26,7 @@ class _MainScreenState extends State<MainScreen>
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 4, vsync: this);
+    tabController = TabController(length: 5, vsync: this);
   }
 
   @override
@@ -36,6 +37,7 @@ class _MainScreenState extends State<MainScreen>
         controller: tabController,
         children: const [
           HomeTabPage(),
+          WalkTabPage(),
           EarningsTabPage(),
           ReatingTabPage(),
           ProfileTabPage(),
@@ -47,6 +49,18 @@ class _MainScreenState extends State<MainScreen>
               icon: Image.asset('images/huella.png'),
               activeIcon: Image.asset('images/huella.png'),
               label: "Inicio"),
+          BottomNavigationBarItem(
+              icon: Image.asset(
+                'images/agendados.png',
+                height: 60,
+                width: 60,
+              ),
+              activeIcon: Image.asset(
+                'images/agendados.png',
+                height: 60,
+                width: 60,
+              ),
+              label: "Agendados"),
           BottomNavigationBarItem(
               icon: Image.asset('images/credito.png'),
               activeIcon: Image.asset('images/credito.png'),
